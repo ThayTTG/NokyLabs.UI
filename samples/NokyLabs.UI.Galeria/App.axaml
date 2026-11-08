@@ -1,0 +1,11 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="using:NokyLabs.UI"
+             x:Class="NokyLabs.UI.Galeria.App"
+             RequestedThemeVariant="Dark">
+  <Application.Styles>
+    <FluentTheme />
+    <!-- Cada app troca só esta cor -->
+    <ui:NokyTheme Accent="#A068FF" />
+  </Application.Styles>
+</Application>

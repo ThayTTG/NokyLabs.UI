@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Galeria: um app pequeno para ver (e testar) tudo que a NokyLabs.UI oferece. -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NokyLabs.UI\NokyLabs.UI.csproj" />
+  </ItemGroup>
+</Project>

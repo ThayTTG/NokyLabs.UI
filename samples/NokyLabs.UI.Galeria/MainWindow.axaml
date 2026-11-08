@@ -1,0 +1,186 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ui="using:NokyLabs.UI"
+        x:Class="NokyLabs.UI.Galeria.MainWindow"
+        Title="NokyLabs.UI · Galeria" Width="1180" Height="740" MinWidth="900" MinHeight="600"
+        WindowStartupLocation="CenterScreen">
+
+  <Grid ColumnDefinitions="248,*">
+
+    <!-- Barra lateral -->
+    <Border Background="{DynamicResource SidebarBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,1,0">
+      <DockPanel Margin="16,22,16,16">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Spacing="12" Margin="6,0,0,30">
+          <Border Width="42" Height="42" CornerRadius="13" Background="{DynamicResource AccentBrush}">
+            <Viewbox Width="26" Height="26">
+              <Path Classes="icon" Data="{StaticResource IconLogo}" Stroke="{DynamicResource OnAccentBrush}" StrokeThickness="2.9" />
+            </Viewbox>
+          </Border>
+          <StackPanel VerticalAlignment="Center" Spacing="1">
+            <TextBlock Text="NokyLabs.UI" FontSize="18" FontWeight="Bold" />
+            <TextBlock Text="Galeria" Classes="muted" />
+          </StackPanel>
+        </StackPanel>
+
+        <ui:CreditsCard DockPanel.Dock="Bottom" AppName="NokyLabs.UI" Version="v0.1.0 · prévia" />
+
+        <StackPanel Spacing="4">
+          <TextBlock Text="MENU" Classes="caps" Margin="12,0,0,8" />
+          <RadioButton Classes="nav" GroupName="nav" IsChecked="True">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+              <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconLibrary}" /></Viewbox>
+              <TextBlock Text="Componentes" VerticalAlignment="Center" />
+            </StackPanel>
+          </RadioButton>
+          <RadioButton Classes="nav" GroupName="nav">
+            <StackPanel Orientation="Horizontal" Spacing="12">
+              <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconSettings}" /></Viewbox>
+              <TextBlock Text="Configurações" VerticalAlignment="Center" />
+            </StackPanel>
+          </RadioButton>
+        </StackPanel>
+      </DockPanel>
+    </Border>
+
+    <ScrollViewer Grid.Column="1">
+      <StackPanel Margin="36,30,36,36" Spacing="22">
+
+        <Grid ColumnDefinitions="*,Auto" ui:Anim.Entrance="True" ui:Anim.Order="0">
+          <StackPanel Spacing="4">
+            <TextBlock Classes="h1" Text="Kit NokyLabs" />
+            <TextBlock Classes="secondary" Text="Escolha a cor de um app e veja tudo mudar junto." />
+          </StackPanel>
+          <Button Grid.Column="1" Classes="icon" x:Name="TemaBotao" ToolTip.Tip="Alternar tema claro ou escuro" VerticalAlignment="Center">
+            <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconMoon}" /></Viewbox>
+          </Button>
+        </Grid>
+
+        <!-- Cor de cada app -->
+        <WrapPanel x:Name="Cores" ui:Anim.Entrance="True" ui:Anim.Order="1">
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#A068FF" Content="Launcher" IsChecked="True" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#6EE7B7" Content="YT-DLP GUI" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#C4362E" Content="CubeBin" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#3B82F6" Content="HotSwap" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#818CF8" Content="Avaliador" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#22C55E" Content="Blockable" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#F97316" Content="ValReport" />
+          <RadioButton Classes="chip" GroupName="cor" Margin="0,0,8,8" Tag="#2DD4BF" Content="PlaningThings" />
+        </WrapPanel>
+
+        <!-- Números contando -->
+        <Border Classes="card" ui:Anim.Entrance="True" ui:Anim.Order="2">
+          <Grid ColumnDefinitions="*,Auto">
+            <StackPanel Spacing="6" VerticalAlignment="Center">
+              <TextBlock Classes="h2" Text="Seus utilitários, num só lugar" />
+              <TextBlock Classes="secondary" TextWrapping="Wrap" Text="Os números contam do zero ao abrir, como no ValReport." />
+            </StackPanel>
+            <StackPanel Grid.Column="1" Orientation="Horizontal" Spacing="10">
+              <Border Classes="stat"><StackPanel>
+                <TextBlock Classes="num" FontSize="24" FontWeight="Bold" ui:Anim.CountTo="128" />
+                <TextBlock Classes="secondary" FontSize="12" Text="partidas" /></StackPanel></Border>
+              <Border Classes="stat"><StackPanel>
+                <TextBlock Classes="num accent" FontSize="24" FontWeight="Bold" ui:Anim.CountTo="68.4" ui:Anim.Format="{}{0:N1}%" />
+                <TextBlock Classes="secondary" FontSize="12" Text="vitórias" /></StackPanel></Border>
+            </StackPanel>
+          </Grid>
+        </Border>
+
+        <!-- Botões -->
+        <StackPanel Spacing="10" ui:Anim.Entrance="True" ui:Anim.Order="3">
+          <TextBlock Classes="caps" Text="BOTÕES" />
+          <WrapPanel>
+            <Button Classes="primary" Content="Abrir" Margin="0,0,8,8" />
+            <Button Classes="secondary" Content="Ver detalhes" Margin="0,0,8,8" />
+            <Button Classes="soft" Content="Instalar" Margin="0,0,8,8" />
+            <Button Classes="warn" Content="Atualizar" Margin="0,0,8,8" />
+            <Button Classes="running" Content="Rodando" Margin="0,0,8,8" />
+            <Button Classes="danger" Content="Desinstalar" Margin="0,0,8,8" />
+            <Button Classes="ghost" Content="Cancelar" Margin="0,0,8,8" />
+            <Button Classes="primary" Content="Enviando…" IsEnabled="False" Margin="0,0,8,8" />
+            <Button Classes="link" Content="Novidades" Margin="6,0,0,8" VerticalAlignment="Center" />
+          </WrapPanel>
+        </StackPanel>
+
+        <!-- Selos, filtros e campos -->
+        <Grid ColumnDefinitions="*,24,*" ui:Anim.Entrance="True" ui:Anim.Order="4">
+          <StackPanel Spacing="10">
+            <TextBlock Classes="caps" Text="SELOS" />
+            <WrapPanel>
+              <Border Classes="badge" Margin="0,0,6,6"><TextBlock Text="Neutro" /></Border>
+              <Border Classes="badge accent" Margin="0,0,6,6"><TextBlock Text="Novo" /></Border>
+              <Border Classes="badge success" Margin="0,0,6,6"><TextBlock Text="Instalado" /></Border>
+              <Border Classes="badge warning" Margin="0,0,6,6"><TextBlock Text="Atualização" /></Border>
+              <Border Classes="badge danger" Margin="0,0,6,6"><TextBlock Text="Erro" /></Border>
+              <Border Classes="badge gold" Margin="0,0,6,6"><TextBlock Text="MVP" /></Border>
+            </WrapPanel>
+            <TextBlock Classes="caps" Text="FILTROS" Margin="0,8,0,0" />
+            <WrapPanel>
+              <RadioButton Classes="chip" GroupName="f" Content="Todas" IsChecked="True" Margin="0,0,8,8" />
+              <RadioButton Classes="chip" GroupName="f" Content="Apps" Margin="0,0,8,8" />
+              <Border Classes="segmented" Margin="0,0,0,8">
+                <StackPanel Orientation="Horizontal" Spacing="2">
+                  <RadioButton Classes="seg" GroupName="s" Content="Semana" IsChecked="True" />
+                  <RadioButton Classes="seg" GroupName="s" Content="Mês" />
+                </StackPanel>
+              </Border>
+            </WrapPanel>
+          </StackPanel>
+          <StackPanel Grid.Column="2" Spacing="10">
+            <TextBlock Classes="caps" Text="CAMPOS E CONTROLES" />
+            <TextBox Classes="field" Watermark="Cole o link do vídeo…" />
+            <ProgressBar Classes="slim" Value="62" />
+            <StackPanel Orientation="Horizontal" Spacing="18">
+              <CheckBox Content="Baixar só o áudio" IsChecked="True" />
+              <ToggleSwitch OnContent="Ligado" OffContent="Desligado" IsChecked="True" />
+            </StackPanel>
+          </StackPanel>
+        </Grid>
+
+        <!-- Avisos -->
+        <StackPanel Spacing="8" ui:Anim.Entrance="True" ui:Anim.Order="5">
+          <TextBlock Classes="caps" Text="AVISOS" />
+          <Border Classes="notice"><StackPanel Orientation="Horizontal" Spacing="10">
+            <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconInfo}" /></Viewbox>
+            <TextBlock Text="Os dados são atualizados a cada 20 minutos." VerticalAlignment="Center" /></StackPanel></Border>
+          <Border Classes="notice warning"><StackPanel Orientation="Horizontal" Spacing="10">
+            <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconAlert}" /></Viewbox>
+            <TextBlock Text="Uma versão nova está esperando por você." VerticalAlignment="Center" /></StackPanel></Border>
+          <Border Classes="notice danger"><StackPanel Orientation="Horizontal" Spacing="10">
+            <Viewbox Width="18" Height="18"><Path Classes="icon" Data="{StaticResource IconClose}" /></Viewbox>
+            <TextBlock Text="Não foi possível salvar. Tente de novo." VerticalAlignment="Center" /></StackPanel></Border>
+        </StackPanel>
+
+        <!-- Cartões clicáveis -->
+        <StackPanel Spacing="10" ui:Anim.Entrance="True" ui:Anim.Order="6">
+          <TextBlock Classes="caps" Text="CARTÕES" />
+          <WrapPanel>
+            <Border Classes="card clickable" Width="250" Margin="0,0,16,16">
+              <StackPanel Spacing="12">
+                <Grid ColumnDefinitions="Auto,*,Auto">
+                  <Border Width="46" Height="46" CornerRadius="13" Background="{DynamicResource AccentSoftBrush}">
+                    <Viewbox Width="24" Height="24"><Path Classes="icon accent" Data="{StaticResource IconDownload}" /></Viewbox>
+                  </Border>
+                  <Border Grid.Column="2" Classes="badge success" VerticalAlignment="Top"><TextBlock Text="Instalado" /></Border>
+                </Grid>
+                <TextBlock Classes="h3" Text="Passe o mouse" />
+                <TextBlock Classes="secondary" TextWrapping="Wrap" Text="O cartão sobe 2px e a borda ganha a cor do app." />
+                <Button Classes="primary" Content="Abrir" HorizontalAlignment="Stretch" />
+              </StackPanel>
+            </Border>
+            <Border Classes="card soon" Width="250" Margin="0,0,16,16">
+              <StackPanel Spacing="12">
+                <Border Width="46" Height="46" CornerRadius="13" Background="{DynamicResource SurfaceRaisedBrush}" HorizontalAlignment="Left">
+                  <Viewbox Width="24" Height="24"><Path Classes="icon" Data="{StaticResource IconPlus}" /></Viewbox>
+                </Border>
+                <TextBlock Classes="h3" Text="Em breve" />
+                <TextBlock Classes="secondary" TextWrapping="Wrap" Text="Cartões de apps futuros ficam mais apagados." />
+                <Button Classes="soft" Content="Em breve" HorizontalAlignment="Stretch" IsEnabled="False" />
+              </StackPanel>
+            </Border>
+          </WrapPanel>
+        </StackPanel>
+
+      </StackPanel>
+    </ScrollViewer>
+  </Grid>
+</Window>

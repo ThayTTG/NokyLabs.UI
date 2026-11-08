@@ -1,0 +1,103 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- Cores neutras do Kit NokyLabs (iguais às do ValReport). A cor de destaque vem de cada app,
+       pelo NokyTheme (Accent*). Os nomes seguem os do launcher, para migrar sem trocar nada. -->
+  <ResourceDictionary.ThemeDictionaries>
+
+    <!-- Escuro (o principal) -->
+    <ResourceDictionary x:Key="Dark">
+      <Color x:Key="BgColor">#110E1A</Color>
+      <Color x:Key="SidebarColor">#151120</Color>
+      <Color x:Key="SurfaceColor">#1C1729</Color>
+      <Color x:Key="SurfaceHoverColor">#251F36</Color>
+      <Color x:Key="SurfaceRaisedColor">#2F2843</Color>
+      <Color x:Key="BorderColor">#342B4B</Color>
+      <Color x:Key="TextColor">#F0ECF8</Color>
+      <Color x:Key="TextSecondaryColor">#C9C1DB</Color>
+      <Color x:Key="TextMutedColor">#968DAC</Color>
+      <Color x:Key="SuccessColor">#54D688</Color>
+      <Color x:Key="WarningColor">#F6B84C</Color>
+      <Color x:Key="DangerColor">#F67070</Color>
+      <Color x:Key="ShadowColor">#59000000</Color>
+      <SolidColorBrush x:Key="StatBrush" Color="#1AFFFFFF" />
+      <SolidColorBrush x:Key="BgBrush" Color="#110E1A" />
+      <SolidColorBrush x:Key="SidebarBrush" Color="#151120" />
+      <SolidColorBrush x:Key="SurfaceBrush" Color="#1C1729" />
+      <SolidColorBrush x:Key="SurfaceHoverBrush" Color="#251F36" />
+      <SolidColorBrush x:Key="SurfaceRaisedBrush" Color="#2F2843" />
+      <SolidColorBrush x:Key="BorderBrush" Color="#342B4B" />
+      <SolidColorBrush x:Key="TextBrush" Color="#F0ECF8" />
+      <SolidColorBrush x:Key="TextSecondaryBrush" Color="#C9C1DB" />
+      <SolidColorBrush x:Key="TextMutedBrush" Color="#968DAC" />
+      <SolidColorBrush x:Key="SuccessBrush" Color="#54D688" />
+      <SolidColorBrush x:Key="SuccessSoftBrush" Color="#54D688" Opacity="0.16" />
+      <SolidColorBrush x:Key="WarningBrush" Color="#F6B84C" />
+      <SolidColorBrush x:Key="WarningSoftBrush" Color="#F6B84C" Opacity="0.16" />
+      <SolidColorBrush x:Key="WarningSoftHoverBrush" Color="#F6B84C" Opacity="0.26" />
+      <SolidColorBrush x:Key="DangerBrush" Color="#F67070" />
+      <SolidColorBrush x:Key="DangerSoftBrush" Color="#F67070" Opacity="0.16" />
+    </ResourceDictionary>
+
+    <!-- Claro -->
+    <ResourceDictionary x:Key="Light">
+      <Color x:Key="BgColor">#FAF6F1</Color>
+      <Color x:Key="SidebarColor">#F5EEE6</Color>
+      <Color x:Key="SurfaceColor">#FFFFFF</Color>
+      <Color x:Key="SurfaceHoverColor">#F5EEE6</Color>
+      <Color x:Key="SurfaceRaisedColor">#ECE2D6</Color>
+      <Color x:Key="BorderColor">#E6DACD</Color>
+      <Color x:Key="TextColor">#241B14</Color>
+      <Color x:Key="TextSecondaryColor">#4A3D33</Color>
+      <Color x:Key="TextMutedColor">#7D6E62</Color>
+      <Color x:Key="SuccessColor">#1B9A57</Color>
+      <Color x:Key="WarningColor">#B77B09</Color>
+      <Color x:Key="DangerColor">#D64545</Color>
+      <Color x:Key="ShadowColor">#1A46280A</Color>
+      <SolidColorBrush x:Key="StatBrush" Color="#0F46280A" />
+      <SolidColorBrush x:Key="BgBrush" Color="#FAF6F1" />
+      <SolidColorBrush x:Key="SidebarBrush" Color="#F5EEE6" />
+      <SolidColorBrush x:Key="SurfaceBrush" Color="#FFFFFF" />
+      <SolidColorBrush x:Key="SurfaceHoverBrush" Color="#F5EEE6" />
+      <SolidColorBrush x:Key="SurfaceRaisedBrush" Color="#ECE2D6" />
+      <SolidColorBrush x:Key="BorderBrush" Color="#E6DACD" />
+      <SolidColorBrush x:Key="TextBrush" Color="#241B14" />
+      <SolidColorBrush x:Key="TextSecondaryBrush" Color="#4A3D33" />
+      <SolidColorBrush x:Key="TextMutedBrush" Color="#7D6E62" />
+      <SolidColorBrush x:Key="SuccessBrush" Color="#1B9A57" />
+      <SolidColorBrush x:Key="SuccessSoftBrush" Color="#1B9A57" Opacity="0.16" />
+      <SolidColorBrush x:Key="WarningBrush" Color="#B77B09" />
+      <SolidColorBrush x:Key="WarningSoftBrush" Color="#B77B09" Opacity="0.16" />
+      <SolidColorBrush x:Key="WarningSoftHoverBrush" Color="#B77B09" Opacity="0.26" />
+      <SolidColorBrush x:Key="DangerBrush" Color="#D64545" />
+      <SolidColorBrush x:Key="DangerSoftBrush" Color="#D64545" Opacity="0.16" />
+    </ResourceDictionary>
+
+  </ResourceDictionary.ThemeDictionaries>
+
+  <!-- Igual nos dois temas -->
+  <Color x:Key="GoldColor">#F2B33D</Color>
+  <Color x:Key="BrandPurpleColor">#A068FF</Color>
+  <Color x:Key="BrandOrangeColor">#EC7518</Color>
+
+
+  <SolidColorBrush x:Key="GoldBrush" Color="{StaticResource GoldColor}" />
+  <SolidColorBrush x:Key="GoldSoftBrush" Color="{StaticResource GoldColor}" Opacity="0.22" />
+
+  <!-- Gradiente da marca (o quadradinho do "n") -->
+  <LinearGradientBrush x:Key="BrandGradient" StartPoint="0%,0%" EndPoint="100%,100%">
+    <GradientStop Offset="0" Color="#6D28D9" />
+    <GradientStop Offset="1" Color="#C084FC" />
+  </LinearGradientBrush>
+
+  <!-- Fonte: Inter (registrada pelo UseNokyLabs() no Program.cs) -->
+  <FontFamily x:Key="NokyFont">fonts:Inter#Inter, $Default</FontFamily>
+
+  <!-- Raios do Kit -->
+  <CornerRadius x:Key="RadiusSmall">10</CornerRadius>
+  <CornerRadius x:Key="RadiusControl">12</CornerRadius>
+  <CornerRadius x:Key="RadiusCard">16</CornerRadius>
+  <CornerRadius x:Key="RadiusLarge">20</CornerRadius>
+  <CornerRadius x:Key="RadiusPill">999</CornerRadius>
+
+</ResourceDictionary>

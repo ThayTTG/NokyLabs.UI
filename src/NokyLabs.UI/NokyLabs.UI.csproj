@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- NokyLabs.UI: o Kit NokyLabs para apps Avalonia (cores, controles, animações e créditos).
+       Cada app só escolhe a sua cor de destaque: <ui:NokyTheme Accent="#6EE7B7" /> -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    <Version>0.1.0</Version>
+    <RootNamespace>NokyLabs.UI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AvaloniaResource Include="Tema\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.*" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.*" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.*" />
+  </ItemGroup>
+
+</Project>

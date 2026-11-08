@@ -1,0 +1,26 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:ui="using:NokyLabs.UI"
+             x:Class="NokyLabs.UI.CreditsCard"
+             x:Name="Root">
+
+  <!-- O cartão do rodapé da barra lateral: nome, versão e os créditos de sempre.
+       <ui:CreditsCard AppName="YT-DLP GUI" Version="v3.0.0" /> -->
+  <Border Background="{DynamicResource SurfaceBrush}"
+          BorderBrush="{DynamicResource BorderBrush}"
+          BorderThickness="1" CornerRadius="12" Padding="14,12">
+    <StackPanel Spacing="2">
+      <TextBlock Text="{Binding AppName, ElementName=Root}" FontSize="12" FontWeight="SemiBold"
+                 Foreground="{DynamicResource TextBrush}" />
+      <TextBlock Classes="muted" Text="{Binding Version, ElementName=Root}"
+                 IsVisible="{Binding Version, ElementName=Root, Converter={x:Static StringConverters.IsNotNullOrEmpty}}" />
+      <Border Height="1" Margin="0,8,0,6" Background="{DynamicResource BorderBrush}" />
+      <TextBlock FontSize="11" FontWeight="SemiBold" TextWrapping="Wrap" Foreground="{DynamicResource TextBrush}">
+        <Run Text="Idealizado e aprovado por" /><LineBreak /><Run Text="Thayna Dias" />
+      </TextBlock>
+      <TextBlock Classes="muted" FontSize="11" TextWrapping="Wrap" Margin="0,2,0,0">
+        <Run Text="Desenvolvido com IA" /><LineBreak /><Run Text="(Claude, da Anthropic)" />
+      </TextBlock>
+    </StackPanel>
+  </Border>
+</UserControl>
