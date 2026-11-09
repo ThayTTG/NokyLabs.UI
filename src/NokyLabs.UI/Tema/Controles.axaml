@@ -411,6 +411,31 @@
     <Setter Property="BorderThickness" Value="1" />
   </Style>
 
+  <!-- desabilitado (ex.: durante um download): continua escuro, só mais apagado -->
+  <Style Selector="TextBox.field:disabled /template/ Border#PART_BorderElement">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+  </Style>
+  <Style Selector="TextBox.field:disabled">
+    <Setter Property="Opacity" Value="0.6" />
+  </Style>
+
+  <!-- Listas de escolha (ComboBox) com o mesmo jeito dos campos -->
+  <Style Selector="ComboBox">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+    <Setter Property="CornerRadius" Value="12" />
+    <Setter Property="MinHeight" Value="40" />
+    <Setter Property="Padding" Value="12,8" />
+  </Style>
+  <Style Selector="ComboBox:disabled /template/ Border#Background">
+    <Setter Property="Background" Value="{DynamicResource SurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+  </Style>
+  <Style Selector="ComboBox:disabled">
+    <Setter Property="Opacity" Value="0.55" />
+  </Style>
+
   <!-- ===================== Barras de progresso ===================== -->
   <Style Selector="ProgressBar">
     <Setter Property="Foreground" Value="{DynamicResource AccentBrush}" />
