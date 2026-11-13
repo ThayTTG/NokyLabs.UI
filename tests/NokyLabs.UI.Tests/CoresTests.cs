@@ -10,6 +10,7 @@ public sealed class CoresTests
     public static TheoryData<string> CoresDosApps => new()
     {
         "#A068FF", "#6EE7B7", "#C4362E", "#3B82F6", "#818CF8", "#22C55E", "#F97316", "#2DD4BF",
+        "#FFD60A", // Just in Time
     };
 
     [Theory, MemberData(nameof(CoresDosApps))]
@@ -33,6 +34,7 @@ public sealed class CoresTests
     [InlineData("#6EE7B7")] // menta (YT-DLP GUI)
     [InlineData("#22C55E")] // verde (Blockable)
     [InlineData("#F97316")] // laranja (ValReport)
+    [InlineData("#FFD60A")] // amarelo (Just in Time)
     public void Cores_claras_ganham_texto_escuro_no_botao(string hex) =>
         Assert.Equal(AccentPalette.Ink, AccentPalette.From(Color.Parse(hex)).OnAccent);
 

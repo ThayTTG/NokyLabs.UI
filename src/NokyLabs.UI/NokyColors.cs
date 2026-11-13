@@ -13,4 +13,5 @@ public static class NokyColors
     public static readonly Color Blockable = Color.Parse("#22C55E");     // verde
     public static readonly Color ValReport = Color.Parse("#F97316");     // laranja
     public static readonly Color PlaningThings = Color.Parse("#2DD4BF"); // verde-água
+    public static readonly Color JustInTime = Color.Parse("#FFD60A");    // amarelo-limão (decidida em 13/11/2026)
 }
