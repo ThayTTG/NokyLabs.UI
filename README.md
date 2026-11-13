@@ -10,10 +10,13 @@ O **Kit NokyLabs** para apps em Avalonia: as mesmas cores, cantos, botões, cart
 | YT-DLP GUI | `#6EE7B7` menta | | Blockable | `#22C55E` verde |
 | CubeBin | `#C4362E` vermelho | | ValReport | `#F97316` laranja |
 | HotSwap | `#3B82F6` azul | | PlaningThings | `#2DD4BF` verde-água |
+| Just in Time | `#FFD60A` amarelo-limão | | | |
 
 Também em código: `NokyColors.YtDlpGui`, `NokyColors.CubeBin`…
 
 Para um app novo: escolha uma cor que **não se confunda** com as de cima nem com o verde de "Instalado" (`#54D688`) e o vermelho de erro (`#F67070`), e rode os testes (`CoresTests`) com ela.
+
+> **App Android (Kotlin/Compose)?** Use a versão em Compose, na pasta [`compose/`](compose/README.md): mesmas cores, mesmos componentes, mesmas contas.
 
 ## Como usar num app
 
